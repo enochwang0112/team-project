@@ -59,7 +59,25 @@ As a chess player, I want to see statistics about my games, such as time control
 6. The system displays the game list, showing each game's date, opponent, colour, result, and time control.
 
 
-### Use Case 2
+### Use Case 2: Replay a game
+
+**Primary actor:** Player
+
+**Preconditions:**
+- At least one game has been imported and saved.
+
+**Trigger:** The player selects a game from the game list.
+
+**Success outcome:** The board shows the position after the move the player chose.
+
+**Main success scenario:**
+1. The player selects a game from the game list.
+2. The system loads the game from local storage.
+3. The system displays the starting position on the board, with the full move list beside it.
+4. The player clicks "Next", "Previous", "First", or "Last".
+5. The system updates the board to the position after that move and highlights the move in the move list.
+6. Steps 4–5 repeat until the player leaves the replay view.
+
 
 ### Use Case 3: Evaluate a position
 
