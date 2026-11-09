@@ -21,7 +21,7 @@
 ## User Stories
 
 ### User Story 1
-
+As a chess player, I want to import my recent games by entering my Chess.com account, showing the basic information of the matches, so that I can track and analyze them.
 ### User Story 2
 
 ### User Story 3
