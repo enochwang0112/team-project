@@ -27,6 +27,7 @@
 ### User Story 3
 
 ### User Story 4
+As a chess player, I want the app to review an entire game and classify my moves, so that I can see how many good and bad moves I did.
 
 ### User Story 5
  As a chess player, I want to see statistics about my games, such as time control, most used openings and win rates per color, so I can find patterns in my strengths and weaknesses and find areas of improvement. 
