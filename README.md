@@ -42,7 +42,25 @@ As a chess player, I want to see statistics about my games, such as time control
 
 ### Use Case 2
 
-### Use Case 3
+### Use Case 3: Evaluate a position
+
+**Primary actor:** Player
+
+**Preconditions:**
+- A game is open in the replay view.
+
+**Trigger:** The player clicks "Evaluate" while viewing a position.
+
+**Success outcome:** The evaluation and best move for the current position are displayed, and the result is saved so it does not need to be requested again.
+
+**Main success scenario:**
+1. The player clicks "Evaluate".
+2. The system converts the current position to FEN (Forsyth-Edwards Notation).
+3. The system sends the FEN to the Stockfish API.
+4. The Stockfish API returns an evaluation and a best move.
+5. The system saves the evaluation for that position.
+6. The system displays the evaluation and draws an arrow on the board for the best move.
+
 
 ### Use Case 4
 
