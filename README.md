@@ -126,11 +126,11 @@ As a chess player, I want to see statistics about my games, such as time control
 
 | Team Member | MVP Use Case |
 |-------------|--------------|
-| Enoch Wang  | Use Case     |
-| Caleb Chang | Use Case     |
-| Ryan Chan   | Use Case     |
-| Levi He     | Use Case     |
-| Samuele Bonardi | Use Case     |
+| Enoch Wang      | Use Case 1: Import games |
+| Caleb Chang     | Use Case 2: Replay a game |
+| Ryan Chan       | Use Case 3: Evaluate a position |
+| Levi He         | Use Case 4: Review a full game |
+| Samuele Bonardi | Use Case 5: View player statistics |
  
 ---
 
@@ -146,11 +146,19 @@ As a chess player, I want to see statistics about my games, such as time control
 
 ## API Usage
 
-**API Name:**
+**API Name:** Chess.com Published-Data API
 
-**Documentation:** [Link](https://example.com)
+**Documentation:** [Link](https://www.chess.com/news/view/published-data-api)
 
 **How it is used in the program:**
+- Fetches a player's monthly game archives for Use Case 1.
+
+**API Name:** Stockfish Online API
+
+**Documentation:** [Link](https://stockfish.online/)
+
+**How it is used in the program:**
+- Sends a position in FEN and receives an evaluation and best move for Use Cases 3 and 4.
  
 ---
 
