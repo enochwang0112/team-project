@@ -27,6 +27,7 @@
 ### User Story 3
 
 ### User Story 4
+As a chess player, I want the app to review an entire game and classify my moves, so that I can see how many good and bad moves I did.
 
 ### User Story 5
  
