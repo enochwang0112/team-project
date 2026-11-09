@@ -44,7 +44,24 @@ As a chess player, I want to see statistics about my games, such as time control
 
 ### Use Case 3
 
-### Use Case 4
+### Use Case 4: Review a full game
+
+**Primary actor:** Player
+
+**Preconditions:**
+- At least one game has been imported and saved.
+
+**Trigger:** The player selects a game and clicks "Review Game".
+
+**Success outcome:** Every move in the game is classified, the review is saved, and the player can see how many moves fall into each classification.
+
+**Main success scenario:**
+1. The player selects a game and clicks "Review Game".
+2. The system shows a progress bar.
+3. For each position in the game, the system sends the FEN (Forsyth-Edwards Notation) to the Stockfish API and records the evaluation, updating the progress bar.
+4. For each move, the system compares the evaluation before and after the move and classifies it as Best, Good, Inaccuracy, Mistake, or Blunder.
+5. The system saves the review results.
+6. The system displays a count of each classification for both players, and the move list with each move colour-coded by classification.
 
 ### Use Case 5
  
