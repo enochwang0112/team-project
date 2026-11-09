@@ -23,6 +23,7 @@
 ### User Story 1
 As a chess player, I want to import my recent games by entering my Chess.com account, showing the basic information of the matches, so that I can track and analyze them.
 ### User Story 2
+As a chess player, I want to step through one of my games move by move on a board, so that I can see how the game unfolded and revisit key moments.
 
 ### User Story 3
 
