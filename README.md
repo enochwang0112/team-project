@@ -38,7 +38,26 @@ As a chess player, I want to see statistics about my games, such as time control
 
 ## Use Cases
 
-### Use Case 1
+### Use Case 1: Import games
+
+**Primary actor:** Player
+
+**Preconditions:**
+- The player enters a valid timeframe.
+- The player enters a valid Chess.com username.
+
+**Trigger:** The player enters a Chess.com username and clicks "Import".
+
+**Success outcome:** The player's games from the selected timeframe are saved in local storage and shown in the game list with their basic information.
+
+**Main success scenario:**
+1. The player enters a Chess.com username, selects how many recent months to import, and clicks "Import".
+2. The system requests the player's monthly game archives from the Chess.com API.
+3. The Chess.com API returns the games for each requested month.
+4. The system stores each game's move notation and metadata (date, players, colour, result, time control, ratings) into Game entities.
+5. The system saves the new games to local storage.
+6. The system displays the game list, showing each game's date, opponent, colour, result, and time control.
+
 
 ### Use Case 2
 
