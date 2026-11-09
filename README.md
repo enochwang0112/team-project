@@ -1,4 +1,4 @@
-# Project Name
+# Chess.com Game Analyzer
 
 ## Team Information
 
@@ -14,8 +14,8 @@
 
 ### Domain
 
-[Project description]
- 
+Chess Game Analyzer is a Java Swing app that helps chess players learn from their past games. Players import their games from Chess.com, replay them move by move, and use a chess engine to evaluate positions and classify every move in a full game. A statistics view shows results by colour and time control.
+
 ---
 
 ## User Stories
