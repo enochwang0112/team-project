@@ -118,9 +118,23 @@ As a chess player, I want to see statistics about my games, such as time control
 5. The system saves the review results.
 6. The system displays a count of each classification for both players, and the move list with each move colour-coded by classification.
 
-### Use Case 5
- 
----
+### Use Case 5: View player statistics
+
+**Primary actor:** Player
+
+**Preconditions:**
+- At least one game has been imported and saved.
+
+**Trigger:** The player opens the "Statistics" tab.
+
+**Success outcome:** Statistics calculated from the player's saved games are displayed, including win rates per colour, and results by time control.
+
+**Main success scenario:**
+1. The player opens the "Statistics" tab.
+2. The system loads all saved games for the player.
+3. The system calculates win, draw, and loss rates overall and per colour, results by time control, and percentage of move accuracy.
+4. The system displays the statistics in tables and simple charts.
+
 
 ## Minimal Viable Product (MVP)
 
