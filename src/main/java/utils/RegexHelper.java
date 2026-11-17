@@ -18,7 +18,7 @@ public class RegexHelper {
      * @return      An ArrayList with all matches of regex in text
      */
     public static ArrayList<String> parseRegex (String regex, String text){
-        ArrayList<String> matchedStrings = new ArrayList<String>();
+        ArrayList<String> matchedStrings = new ArrayList<>();
         try {
             Pattern pattern = Pattern.compile(regex);
             Matcher matcher = pattern.matcher(text);
