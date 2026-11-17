@@ -22,18 +22,17 @@
 
 ### User Story 1
 As a chess player, I want to import my recent games by entering my Chess.com account, showing the basic information of the matches, so that I can track and analyze them.
+
 ### User Story 2
 As a chess player, I want to step through one of my games move by move on a board, so that I can see how the game unfolded and revisit key moments.
 
 ### User Story 3
-
 As a chess player, I want to ask an engine to evaluate the position I am looking at and suggest the best move, so that I can understand what I should have played.
 
 ### User Story 4
 As a chess player, I want the app to review an entire game and classify my moves, so that I can see how many good and bad moves I did.
 
 ### User Story 5
- 
 As a chess player, I want to see statistics about my games, such as time control, most used openings and win rates per color, so I can find patterns in my strengths and weaknesses and find areas of improvement.
 
 ## Use Cases
