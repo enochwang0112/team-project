@@ -1,5 +1,6 @@
 package usecases;
 
-public interface IFENConverter {
+public interface ISANToFENConverter {
     String sanToFen(String sanString);
+
 }
