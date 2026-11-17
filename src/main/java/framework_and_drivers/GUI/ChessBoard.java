@@ -1,7 +1,5 @@
 package framework_and_drivers.GUI;
 
-import utils.JSONParser;
-
 import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;

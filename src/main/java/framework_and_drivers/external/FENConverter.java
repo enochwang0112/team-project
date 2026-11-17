@@ -30,7 +30,7 @@ public class FENConverter implements ISANToFENConverter, IFENToArrayConverter {
 
         for (int i = 1; i < 9; i++){
             for (int b = 0; b < rows.length; b++){
-                rows[b] = rows[b].replace("" + i, String.valueOf("*").repeat(i));
+                rows[b] = rows[b].replace("" + i, "*".repeat(i));
             }
         }
         for (int i = 0; i < rows.length; i++){
