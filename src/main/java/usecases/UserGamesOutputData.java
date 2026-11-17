@@ -1,4 +1,4 @@
-package usecase;
+package usecases;
 
 public class UserGamesOutputData {
 }
