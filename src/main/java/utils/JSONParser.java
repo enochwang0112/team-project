@@ -15,7 +15,7 @@ public class JSONParser {
      * @param JSON The JSON string to look through.
      * @return     The value at key.
      */
-    public Object findProperty(String key, String JSON){
+    public static Object findProperty(String key, String JSON){
         try{
             JSONObject json = new JSONObject(JSON);
             return json.get(key);
