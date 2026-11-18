@@ -1,6 +1,8 @@
 package usecases;
 
+import java.util.ArrayList;
+
 public interface ISANToFENConverter {
-    String sanToFen(String sanString);
+    ArrayList<String> sanToFen(String startPos, String sanString);
 
 }
