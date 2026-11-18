@@ -1,5 +1,5 @@
 package interface_adapters;
 
 public interface IView {
-    void render();
+    void render(ViewModel viewModel);
 }
