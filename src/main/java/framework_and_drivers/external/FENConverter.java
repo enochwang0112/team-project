@@ -1,14 +1,38 @@
 package framework_and_drivers.external;
 
+import com.github.bhlangonijr.chesslib.Board;
 import interface_adapters.IFENToArrayConverter;
 import usecases.ISANToFENConverter;
 import utils.RegexHelper;
 
+import java.util.ArrayList;
+
 public class FENConverter implements ISANToFENConverter, IFENToArrayConverter {
+    /**
+     * Converts a SAN string and a FEN startPos to
+     * an arraylist of FEN strings.
+     *
+     * @param startPos The startPos of the game in FEN.
+     * @param input The SAN notation of the game, starting at move 1.
+     * @return An arraylist containing all the board states in FEN notation.
+     */
     @Override
-    public String sanToFen(String sanString) {
-        // TODO: Implement this method
-        return "";
+    public ArrayList<String> sanToFen(String startPos, String input) {
+        ArrayList<String> FENList = new ArrayList<>();
+
+        Board board = new Board();
+        board.loadFromFen(startPos);
+        FENList.add(board.getFen(true, true));
+
+        String cleanedSan = input.replaceAll("\\d+\\.+\\s*", "").trim();
+        if (!cleanedSan.isEmpty()) {
+            for (String san : cleanedSan.split("\\s+")) {
+                board.doMove(san);
+                FENList.add(board.getFen(true, true));
+            }
+        }
+
+        return FENList;
     }
 
     /**
