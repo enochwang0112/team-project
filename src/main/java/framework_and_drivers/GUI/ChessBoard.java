@@ -1,18 +1,13 @@
 package framework_and_drivers.GUI;
 
-import javax.imageio.ImageIO;
+import utils.ImageHelper;
+
 import javax.swing.*;
 import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Logger;
-
 
 public class ChessBoard extends JPanel{
-    private static final Logger logger = Logger.getLogger(ChessBoard.class.getName());
     private static final Map<Character, ImageIcon> pieceIcons = new HashMap<>();
     private final JLabel[][] board = new JLabel[8][8];
     private static final char[][] initialPos = {{'r','n','b','q','k','b','n','r'},
@@ -81,6 +76,8 @@ public class ChessBoard extends JPanel{
     }
 
     private static void loadPieceImages(int pieceSize) {
+        pieceIcons.clear();
+
         Map<Character, String> pieces = new HashMap<>(Map.ofEntries(
                 Map.entry('R', "rook-w"),
                 Map.entry('N', "knight-w"),
@@ -97,18 +94,9 @@ public class ChessBoard extends JPanel{
         ));
 
         for (char piece : pieces.keySet()) {
-            try {
-                URL imgUrl = ChessBoard.class.getResource("/" + pieces.get(piece) + ".png");
-                if (imgUrl == null) {
-                    System.err.println("Missing image: /resources/" + pieces.get(piece) + ".png");
-                    continue;
-                }
-                BufferedImage original = ImageIO.read(imgUrl);
-                Image scaled = original.getScaledInstance(-1, pieceSize, Image.SCALE_DEFAULT);
-                pieceIcons.put(piece, new ImageIcon(scaled));
-            } catch (IOException e) {
-                logger.warning(e.getMessage());
-            }
+            String pieceURL = "/" + pieces.get(piece) + ".png";
+            Image pieceImage = ImageHelper.getScaledImage(-1, pieceSize, pieceURL);
+            pieceIcons.put(piece, new ImageIcon(pieceImage));
         }
     }
 }
