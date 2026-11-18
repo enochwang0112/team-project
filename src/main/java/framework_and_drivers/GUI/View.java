@@ -1,5 +1,6 @@
 package framework_and_drivers.GUI;
 
+import interface_adapters.Controller;
 import interface_adapters.IView;
 import interface_adapters.ViewModel;
 
@@ -8,25 +9,34 @@ import java.awt.*;
 
 public class View implements IView {
     private final JFrame frame = new JFrame();
+    private ViewModel viewModel;
+    private ChessBoard chessBoard;
+    private PlayerCard playerCardBottom;
+    private PlayerCard playerCardTop;
+    private AnalysisBar analysisBar;
+    private Controller controller;
 
-    public View(){
-        JPanel panel1 = new JPanel();
+    public View(Controller controller){
+        this.controller = controller;
+
+        JPanel chessPlayerPanel = new JPanel();
 
         // TODO: Get rid of these numbers and use ViewModel instead.
-        ChessBoard chessboard = new ChessBoard(60, 40);
-        PlayerCard playerCardTop = new PlayerCard(60);
-        PlayerCard playerCardBottom = new PlayerCard(60);
-        AnalysisBar analysisBar = new AnalysisBar(20, 620);
-        // width is height/30 and height is squareSize*8+2*playerCard+2*(2*vgap)
+        chessBoard = new ChessBoard(60, 40);
+        playerCardTop = new PlayerCard(60);
+        playerCardBottom = new PlayerCard(60);
+        analysisBar = new AnalysisBar(20, 620);
+        // height = squareSize*8+2*playerCard+2*(2*vgap)
+        // width = height/30
         // vgap = 5 unless otherwise set in playercard
 
-        panel1.add(playerCardTop);
-        panel1.add(chessboard);
-        panel1.add(playerCardBottom);
+        chessPlayerPanel.add(playerCardTop);
+        chessPlayerPanel.add(chessBoard);
+        chessPlayerPanel.add(playerCardBottom);
 
-        panel1.setLayout(new BoxLayout(panel1, BoxLayout.Y_AXIS));
+        chessPlayerPanel.setLayout(new BoxLayout(chessPlayerPanel, BoxLayout.Y_AXIS));
 
-        frame.add(panel1);
+        frame.add(chessPlayerPanel);
         frame.add(analysisBar, BorderLayout.EAST);
 
         frame.pack();
@@ -35,11 +45,14 @@ public class View implements IView {
 
     @Override
     public void render(ViewModel viewModel){
-        // TODO: Implement this method
+        if (this.viewModel == null) {
+            this.viewModel = viewModel;
+        }
+
     }
 
     /**
-     * Sets the frame to be visible. Equivalent to setVisible(true).
+     * Sets the frame to be visible. Equivalent to frame.setVisible(true).
      */
     public void show() { frame.setVisible(true); }
 }
