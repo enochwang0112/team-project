@@ -3,11 +3,7 @@ package framework_and_drivers.GUI;
 import utils.ImageHelper;
 
 import javax.swing.*;
-import javax.imageio.ImageIO;
 import java.awt.*;
-import java.awt.image.BufferedImage;
-import java.io.IOException;
-import java.net.URL;
 
 
 public class PlayerCard extends JPanel{
