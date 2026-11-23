@@ -5,7 +5,7 @@ import framework_and_drivers.storage.SessionMemory;
 public class NavigateGameInteractor implements INavigateGame{
     public NavigateGameInteractor(NavigateGameOutputBoundary presenter,
                                   SessionMemory storage) {
-
+        // TODO: Implement this
     }
 
     @Override
