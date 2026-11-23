@@ -1,18 +1,10 @@
 package interface_adapters;
 
-import usecases.EvaluationOutputBoundary;
-import usecases.EvaluationOutputData;
-import usecases.UserGamesOutputBoundary;
-import usecases.UserGamesOutputData;
+import usecases.navigate_game.NavigateGameOutputBoundary;
 
-public class Presenter implements EvaluationOutputBoundary, UserGamesOutputBoundary {
+public class Presenter implements NavigateGameOutputBoundary{
     @Override
-    public void takeEvaluation(EvaluationOutputData outputData) {
-        // TODO: Implement this method
-    }
-
-    @Override
-    public void takeUserGames(UserGamesOutputData outputData) {
-        // TODO: Implement this method
+    public void updateGame(String fen) {
+        // TODO: Implement this
     }
 }

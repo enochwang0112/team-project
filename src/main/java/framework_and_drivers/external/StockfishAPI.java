@@ -1,7 +1,7 @@
 package framework_and_drivers.external;
 
 import entities.ComputerEval;
-import usecases.IComputerEvaluation;
+import usecases.api_interfaces.IComputerEvaluation;
 
 public class StockfishAPI implements IComputerEvaluation {
     @Override
