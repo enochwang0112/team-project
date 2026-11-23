@@ -1,6 +1,6 @@
 package framework_and_drivers.GUI;
 
-import utils.ImageHelper;
+import framework_and_drivers.LocalImageLoader;
 
 import javax.swing.*;
 import java.awt.*;
@@ -95,8 +95,9 @@ public class ChessBoard extends JPanel{
 
         for (char piece : pieces.keySet()) {
             String pieceURL = "/" + pieces.get(piece) + ".png";
-            Image pieceImage = ImageHelper.getScaledImage(-1, pieceSize, pieceURL);
-            pieceIcons.put(piece, new ImageIcon(pieceImage));
+            Image pieceImage = LocalImageLoader.loadLocalImage(pieceURL);
+            Image scaledImage = pieceImage.getScaledInstance(-1, pieceSize, Image.SCALE_DEFAULT);
+            pieceIcons.put(piece, new ImageIcon(scaledImage));
         }
     }
 }

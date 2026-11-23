@@ -1,6 +1,6 @@
 package framework_and_drivers.GUI;
 
-import utils.ImageHelper;
+import framework_and_drivers.LocalImageLoader;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,7 +19,9 @@ public class PlayerCard extends JPanel{
 
         JPanel textBox = new JPanel();
 
-        setPhoto(new ImageIcon(ImageHelper.getScaledImage(-1, size, defaultImage)));
+        setPhoto(new ImageIcon(LocalImageLoader
+                .loadLocalImage(defaultImage)
+                .getScaledInstance(-1, size, Image.SCALE_DEFAULT)));
 
         //TODO: Make this look nicer
         setBackground(new Color(100,100,100));
