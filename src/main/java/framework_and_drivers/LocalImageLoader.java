@@ -11,24 +11,23 @@ public class LocalImageLoader {
     private static final Logger logger = Logger.getLogger(LocalImageLoader.class.getName());
 
     /**
-     * Loads the Image at the URL in memory
+     * Loads the Image at the URL in memory. Returns null if no image was found.
      *
      * @param URL  the URL to load the image from
      * @return A scaled version of the image at URL
      */
     public static Image loadLocalImage(String URL){
-        BufferedImage defaultReturn = new BufferedImage(1, 1, BufferedImage.TYPE_INT_RGB);
         try {
             URL imgUrl = LocalImageLoader.class.getResource(URL);
             if (imgUrl == null) {
                 System.err.println("Missing image: " + URL);
-                return defaultReturn;
+                return null;
             }
             BufferedImage original = ImageIO.read(imgUrl);
             return original;
         } catch (IOException e) {
             logger.warning(e.getMessage());
-            return defaultReturn;
+            return null;
         }
     }
 }
