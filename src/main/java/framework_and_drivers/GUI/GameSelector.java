@@ -1,4 +1,6 @@
 package framework_and_drivers.GUI;
 
-public class GameSelector {
+import javax.swing.*;
+
+public class GameSelector extends JPanel {
 }

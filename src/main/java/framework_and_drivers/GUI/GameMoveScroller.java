@@ -1,4 +1,6 @@
 package framework_and_drivers.GUI;
 
-public class GameMoveScroller {
+import javax.swing.*;
+
+public class GameMoveScroller extends JPanel {
 }
