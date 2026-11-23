@@ -1,15 +1,15 @@
 package interface_adapters;
 
 public class GameArchiveController {
-    public void loadUser(String username){
+    public void loadNewUser(String username){
         // TODO: implement this
     }
 
-    public void loadMonth(String month){
+    public void loadNewMonth(String month){
         // TODO: implement this
     }
 
-    public void loadGame(int gameNum){
+    public void loadNewGame(int gameNum){
         // TODO: implement this
     }
 }
