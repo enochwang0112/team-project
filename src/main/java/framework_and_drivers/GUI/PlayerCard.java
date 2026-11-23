@@ -35,15 +35,21 @@ public class PlayerCard extends JPanel{
         add(textBox);
     }
 
-    public void setUsername(String name){
-        usernameDisplay.setText(name);
-    }
+    /**
+     * Sets the player's username.
+     * @param name Username to set.
+     */
+    public void setUsername(String name){ usernameDisplay.setText(name); }
 
-    public void setRating(int rating){
-        ratingDisplay.setText("Rating: " + rating);
-    }
+    /**
+     * Sets the player's rating.
+     * @param rating Rating to set.
+     */
+    public void setRating(int rating){ ratingDisplay.setText("Rating: " + rating); }
 
-    public void setPhoto(ImageIcon photo){
-        photoCard.setIcon(photo);
-    }
+    /**
+     * Sets the player's profile picture.
+     * @param photo Profile picture to set.
+     */
+    public void setPhoto(ImageIcon photo){ photoCard.setIcon(photo); }
 }

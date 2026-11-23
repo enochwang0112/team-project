@@ -5,8 +5,6 @@ import java.awt.*;
 
 public class AnalysisBar extends JSplitPane {
 
-    private double whitePercent = 0.5;
-
     public AnalysisBar(int width, int height) {
         super(JSplitPane.VERTICAL_SPLIT);
 
@@ -22,11 +20,15 @@ public class AnalysisBar extends JSplitPane {
         setBottomComponent(whitePanel);
         setDividerSize(0);
         setEnabled(false);
-        setDividerLocation((int)(whitePercent*height));
+        setDividerLocation((int)(0.5*height));
     }
 
+    /**
+     * Sets the split between black and white represented as a double between 0 and 1.
+     * @param percent Percentage of black in the bar.
+     */
     public void setPercent(double percent) {
-        whitePercent = Math.max(0, Math.min(1, percent));
-        setDividerLocation(whitePercent);
+        double split = Math.max(0, Math.min(1, percent));
+        setDividerLocation(split);
     }
 }
