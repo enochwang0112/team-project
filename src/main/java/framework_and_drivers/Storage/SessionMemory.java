@@ -14,6 +14,7 @@ public class SessionMemory implements IGameArchiveStorage, IEvaluationStorage, I
     ArrayList<ChessGame> gameArchive;
     ComputerEval evaluation;
     ChessGame activeGame;
+    int currentMove;
 
     @Override
     public List<ChessGame> getGames() {
@@ -43,5 +44,13 @@ public class SessionMemory implements IGameArchiveStorage, IEvaluationStorage, I
     @Override
     public void setActiveGame(ChessGame game) {
         this.activeGame = game;
+    }
+
+    public int getCurrentMove(){
+        return this.currentMove;
+    }
+
+    public void setCurrentMove(int currentMove) {
+        this.currentMove = currentMove;
     }
 }
