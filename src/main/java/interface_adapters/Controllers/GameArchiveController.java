@@ -1,4 +1,4 @@
-package interface_adapters;
+package interface_adapters.Controllers;
 
 public class GameArchiveController {
     public void loadNewUser(String username){

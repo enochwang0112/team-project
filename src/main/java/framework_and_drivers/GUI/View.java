@@ -1,11 +1,11 @@
 package framework_and_drivers.GUI;
 
+import framework_and_drivers.ControllerActions;
 import interface_adapters.IView;
 import interface_adapters.ViewModel;
 
 import javax.swing.*;
 import java.awt.*;
-import java.util.function.Consumer;
 
 public class View implements IView {
     private final JFrame frame = new JFrame();

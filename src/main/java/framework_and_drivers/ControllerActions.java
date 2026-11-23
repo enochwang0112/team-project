@@ -1,4 +1,4 @@
-package framework_and_drivers.GUI;
+package framework_and_drivers;
 
 public interface ControllerActions {
     void nextMove();

@@ -1,4 +1,4 @@
-package interface_adapters;
+package interface_adapters.Controllers;
 
 public class ReplayController {
     public void nextMove(){
