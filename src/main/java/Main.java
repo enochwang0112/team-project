@@ -1,7 +1,7 @@
 import framework_and_drivers.ControllerActions;
-import framework_and_drivers.GUI.View;
-import interface_adapters.Controllers.GameArchiveController;
-import interface_adapters.Controllers.ReplayController;
+import framework_and_drivers.gui.View;
+import interface_adapters.controllers.GameArchiveController;
+import interface_adapters.controllers.ReplayController;
 
 import javax.swing.*;
 

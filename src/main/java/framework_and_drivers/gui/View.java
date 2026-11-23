@@ -1,4 +1,4 @@
-package framework_and_drivers.GUI;
+package framework_and_drivers.gui;
 
 import framework_and_drivers.ControllerActions;
 import interface_adapters.IView;

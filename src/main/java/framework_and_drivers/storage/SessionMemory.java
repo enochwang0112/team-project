@@ -1,20 +1,21 @@
-package framework_and_drivers.Storage;
+package framework_and_drivers.storage;
 
 import entities.ChessGame;
 import entities.ComputerEval;
-import usecases.StorageInterfaces.IActiveGameDataStorage;
-import usecases.StorageInterfaces.IEvaluationStorage;
-import usecases.StorageInterfaces.IGameArchiveStorage;
+import usecases.storage_interfaces.IActiveGameStorage;
+import usecases.storage_interfaces.IEvaluationStorage;
+import usecases.storage_interfaces.IGameArchiveStorage;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class SessionMemory implements IGameArchiveStorage, IEvaluationStorage, IActiveGameDataStorage {
+public class SessionMemory implements IGameArchiveStorage, IEvaluationStorage, IActiveGameStorage {
 
     ArrayList<ChessGame> gameArchive;
     ComputerEval evaluation;
     ChessGame activeGame;
     int currentMove;
+    String fen;
 
     @Override
     public List<ChessGame> getGames() {
@@ -34,6 +35,16 @@ public class SessionMemory implements IGameArchiveStorage, IEvaluationStorage, I
     @Override
     public void setComputerEval(ComputerEval evaluation) {
         this.evaluation = evaluation;
+    }
+
+    @Override
+    public String getFEN() {
+        return this.fen;
+    }
+
+    @Override
+    public void setFEN(String fen) {
+        this.fen = fen;
     }
 
     @Override

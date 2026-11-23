@@ -1,4 +1,4 @@
-package usecases.StorageInterfaces;
+package usecases.storage_interfaces;
 
 import entities.ChessGame;
 

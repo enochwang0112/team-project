@@ -1,4 +1,4 @@
-package framework_and_drivers.GUI;
+package framework_and_drivers.gui;
 
 import javax.swing.*;
 

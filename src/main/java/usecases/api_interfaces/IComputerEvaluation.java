@@ -1,4 +1,4 @@
-package usecases.APIInterfaces;
+package usecases.api_interfaces;
 
 import entities.ComputerEval;
 

@@ -1,8 +1,8 @@
 package framework_and_drivers.external;
 
 import entities.ChessGame;
-import usecases.APIInterfaces.IChessRepo;
-import usecases.APIInterfaces.IUserProfileRepo;
+import usecases.api_interfaces.IChessRepo;
+import usecases.api_interfaces.IUserProfileRepo;
 
 import java.awt.*;
 import java.util.ArrayList;
