@@ -5,4 +5,6 @@ import entities.ChessGame;
 public interface IActiveGameStorage {
     ChessGame getActiveGame();
     void setActiveGame(ChessGame game);
+    int getCurrentMove();
+    void setCurrentMove(int index);
 }

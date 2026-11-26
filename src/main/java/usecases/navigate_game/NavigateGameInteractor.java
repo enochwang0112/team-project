@@ -1,25 +1,40 @@
 package usecases.navigate_game;
 
-import framework_and_drivers.storage.SessionMemory;
+import entities.ChessGame;
+import usecases.storage_interfaces.IActiveGameStorage;
+import usecases.storage_interfaces.IEvaluationStorage;
 
 public class NavigateGameInteractor implements INavigateGame{
-    public NavigateGameInteractor(NavigateGameOutputBoundary presenter,
-                                  SessionMemory storage) {
-        // TODO: Implement this
+    private final IActiveGameStorage storage;
+    private final IEvaluationStorage evaluation;
+    private final NavigateGameOutputBoundary output;
+
+    public NavigateGameInteractor(IActiveGameStorage storage,
+                                  IEvaluationStorage evaluation,
+                                  NavigateGameOutputBoundary output) {
+        this.storage = storage;
+        this.evaluation = evaluation;
+        this.output = output;
     }
 
     @Override
     public void nextMove() {
-        // TODO: Implement this
+        setMove(storage.getCurrentMove() + 1);
     }
 
     @Override
     public void prevMove() {
-        // TODO: Implement this
+        setMove(storage.getCurrentMove() - 1);
     }
 
     @Override
     public void setMove(int moveNum) {
-        // TODO: Implement this
+        ChessGame game = storage.getActiveGame();
+        if (game == null) {
+            // output.presentFailure
+            return;
+        }
+
+        // Will implement the rest of this once ChessGame entity is implemented.
     }
 }
